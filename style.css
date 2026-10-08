@@ -395,4 +395,88 @@ footer {
     .modal-article .article-title {
         font-size: 1.2em;
     }
+    /* ============================================================
+   ФОТО В ДОСЬЕ
+   ============================================================ */
+.person {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.person-photo {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #5a4a3a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.3) contrast(1.1);
+    transition: filter 0.3s;
+}
+
+.person:hover .person-photo img {
+    filter: sepia(0) contrast(1.2);
+}
+
+.person-info {
+    flex: 1;
+}
+
+.person-secret .person-photo {
+    border-style: dashed;
+    border-color: #8b7355;
+}
+
+/* ============================================================
+   ФОТО В КАРТОЧКАХ БОТОВ
+   ============================================================ */
+.bot-photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #5a4a3a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.bot-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.3) contrast(1.1);
+    transition: filter 0.3s;
+}
+
+.bot-card:hover .bot-photo img {
+    filter: sepia(0) contrast(1.2);
+}
+
+/* ============================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ ДЛЯ ДОСЬЕ
+   ============================================================ */
+@media (max-width: 700px) {
+    .person {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .person-photo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .quote {
+        text-align: left;
+    }
+}
 }
