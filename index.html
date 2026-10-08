@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тень над Блэквудом — Архив города</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ТЕНЬ НАД БЛЭКВУДОМ</h1>
+    <p class="subtitle">Архив города • 1943–1953</p>
+</header>
+
+<nav>
+    <a href="#map">Карта города</a>
+    <a href="#archive">Газетный архив</a>
+    <a href="#persons">Досье</a>
+    <a href="#play">Играть</a>
+</nav>
+
+<main>
+
+    <section id="intro">
+        <h2>Блэквуд, 1953</h2>
+        <p>
+            Маленький английский городок на краю мира. Туман, дождь, старая станция с часами,
+            которые всегда показывают 3:33. Здесь пропадают люди. Здесь никто не задаёт вопросов.
+            Здесь у каждого есть прошлое, о котором лучше не вспоминать.
+        </p>
+        <p>
+            Добро пожаловать в архив. Здесь собраны газетные вырезки, досье и карта города —
+            всё то, что поможет вам в расследовании.
+        </p>
+    </section>
+
+    <section id="map">
+        <h2>🗺 Карта Блэквуда</h2>
+        <p>Нажмите на точку, чтобы узнать больше.</p>
+        <div id="map-container">
+            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="600" fill="#1a1a1a"/>
+
+                <line x1="100" y1="300" x2="700" y2="300" stroke="#444" stroke-width="2"/>
+                <line x1="400" y1="100" x2="400" y2="500" stroke="#444" stroke-width="2"/>
+
+                <g class="location" data-location="station">
+                    <circle cx="150" cy="300" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
+                    <text x="150" y="305" text-anchor="middle" fill="#d4c5a9" font-size="12">🚂</text>
+                    <text x="150" y="345" text-anchor="middle" fill="#d4c5a9" font-size="14">Станция</text>
+                </g>
+
+                <g class="location" data-location="thomas_house">
+                    <circle cx="400" cy="200" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
+                    <text x="400" y="205" text-anchor="middle" fill="#d4c5a9" font-size="12">🏠</text>
+                    <text x="400" y="245" text-anchor="middle" fill="#d4c5a9" font-size="14">Дом Моргана</text>
+                </g>
+
+                <g class="location" data-location="lodge">
+                    <circle cx="550" cy="400" r="20" fill="#5a4a3a" stroke="#a08060" stroke-width="2"/>
+                    <text x="550" y="405" text-anchor="middle" fill="#a08060" font-size="12">⛪</text>
+                    <text x="550" y="445" text-anchor="middle" fill="#a08060" font-size="14">Ложа</text>
+                </g>
+
+                <g class="location" data-location="cemetery">
+                    <circle cx="250" cy="450" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
+                    <text x="250" y="455" text-anchor="middle" fill="#d4c5a9" font-size="12">⚰️</text>
+                    <text x="250" y="495" text-anchor="middle" fill="#d4c5a9" font-size="14">Кладбище</text>
+                </g>
+
+                <g class="location" data-location="pharmacy">
+                    <circle cx="600" cy="200" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
+                    <text x="600" y="205" text-anchor="middle" fill="#d4c5a9" font-size="12">🏥</text>
+                    <text x="600" y="245" text-anchor="middle" fill="#d4c5a9" font-size="14">Аптека Кроу</text>
+                </g>
+
+                <g class="location" data-location="police">
+                    <circle cx="300" cy="150" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
+                    <text x="300" y="155" text-anchor="middle" fill="#d4c5a9" font-size="12">👮</text>
+                    <text x="300" y="195" text-anchor="middle" fill="#d4c5a9" font-size="14">Участок</text>
+                </g>
+            </svg>
+        </div>
+        <div id="location-info" class="info-box">
+            <p><em>Выберите локацию на карте.</em></p>
+        </div>
+    </section>
+
+    <section id="archive">
+        <h2>📰 Газетный архив</h2>
+        <p>Выдержки из «Блэквудского вестника».</p>
+
+        <article class="newspaper">
+            <h3>1943 — ЭПИДЕМИЯ В ПРИЮТЕ СВ. ЛЮЦИИ</h3>
+            <p>Приют св. Люции закрыт по причинам, не разглашаемым общественности. По слухам, причиной стала эпидемия неизвестной болезни. Двенадцать детей погибли, четверо пропали без вести. Полиция отказывается от комментариев.</p>
+        </article>
+
+        <article class="newspaper">
+            <h3>1944 — ПРОПАЖА ДЕТЕЙ ПРОДОЛЖАЕТСЯ</h3>
+            <p>За последний год в Блэквуде пропали трое детей. Родители требуют расследования. Инспектор Морган утверждает, что «принимаются все необходимые меры».</p>
+        </article>
+
+        <article class="newspaper">
+            <h3>1945 — ЭПИДЕМИЯ НЕ ПОДТВЕРЖДЕНА</h3>
+            <p>Медицинская комиссия не подтвердила слухи об эпидемии в приюте. По словам доктора Э. Кроу, «дети умирали от естественных причин».</p>
+        </article>
+
+        <article class="newspaper">
+            <h3>1953 — ЧАСТНЫЙ ДЕТЕКТИВ ПРИБЫЛ В ГОРОД</h3>
+            <p>По нашим данным, в Блэквуд прибыл частный детектив Джеймс Харпер. Цель визита неизвестна.</p>
+        </article>
+    </section>
+
+    <section id="persons">
+        <h2>👥 Досье</h2>
+
+        <div class="person">
+            <h3>Томас Морган</h3>
+            <p><strong>Статус:</strong> пропал без вести</p>
+            <p>Сын инспектора Моргана. В детстве дружил с Джеймсом Харпером. Последний раз видели в доме на Морнинг-лейн.</p>
+            <p class="quote">«Он смотрит через твои глаза.»</p>
+        </div>
+
+        <div class="person">
+            <h3>Доктор Элизабет Кроу</h3>
+            <p><strong>Статус:</strong> под подозрением</p>
+            <p>Городской врач. Работала в приюте св. Люции в 1943 году. Отказывается комментировать события прошлого.</p>
+            <p class="quote">«Наука требует жертв.»</p>
+        </div>
+
+        <div class="person">
+            <h3>Инспектор Джордж Морган</h3>
+            <p><strong>Статус:</strong> свидетель</p>
+            <p>Отец Томаса. 27 лет в полиции Блэквуда. Скрывает информацию о пропавших.</p>
+            <p class="quote">«Правда в том, что я убил своего сына. Молчанием.»</p>
+        </div>
+
+        <div class="person">
+            <h3>Безымянный</h3>
+            <p><strong>Статус:</strong> неизвестен</p>
+            <p>Личность не установлена. Появляется в городе в момент кризиса. Говорит загадками.</p>
+            <p class="quote">«Я — то, что осталось. Или то, что ты забыл.»</p>
+        </div>
+    </section>
+
+    <section id="play">
+        <h2>🕵️ Играть</h2>
+        <p>Полная детективная история в Telegram. 6 глав, 3 концовки, живые персонажи.</p>
+        <a href="https://t.me/blackwood_detective_bot" class="play-button">▶ Начать расследование</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>© Блэквуд, 1953. Все события вымышлены. Или нет.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
