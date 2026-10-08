@@ -37,110 +37,134 @@
 
     <section id="map">
         <h2>🗺 Карта Блэквуда</h2>
-        <p>Нажмите на точку, чтобы узнать больше.</p>
+        <p>Нажмите на метку, чтобы узнать больше о локации.</p>
+
         <div id="map-container">
-            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-                <rect width="800" height="600" fill="#1a1a1a"/>
+            <div class="map-wrapper">
+                <img src="map.jpg" alt="Карта Блэквуда" class="map-image">
 
-                <line x1="100" y1="300" x2="700" y2="300" stroke="#444" stroke-width="2"/>
-                <line x1="400" y1="100" x2="400" y2="500" stroke="#444" stroke-width="2"/>
+                <!-- Интерактивные точки поверх карты -->
+                <!-- Координаты в процентах от размера картинки -->
+                <button class="map-pin" style="top: 78%; left: 12%;"
+                        data-location="station" title="Станция">
+                    🚂
+                </button>
 
-                <g class="location" data-location="station">
-                    <circle cx="150" cy="300" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
-                    <text x="150" y="305" text-anchor="middle" fill="#d4c5a9" font-size="12">🚂</text>
-                    <text x="150" y="345" text-anchor="middle" fill="#d4c5a9" font-size="14">Станция</text>
-                </g>
+                <button class="map-pin" style="top: 45%; left: 48%;"
+                        data-location="thomas_house" title="Дом Моргана">
+                    🏠
+                </button>
 
-                <g class="location" data-location="thomas_house">
-                    <circle cx="400" cy="200" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
-                    <text x="400" y="205" text-anchor="middle" fill="#d4c5a9" font-size="12">🏠</text>
-                    <text x="400" y="245" text-anchor="middle" fill="#d4c5a9" font-size="14">Дом Моргана</text>
-                </g>
+                <button class="map-pin" style="top: 22%; left: 20%;"
+                        data-location="police" title="Полицейский участок">
+                    👮
+                </button>
 
-                <g class="location" data-location="lodge">
-                    <circle cx="550" cy="400" r="20" fill="#5a4a3a" stroke="#a08060" stroke-width="2"/>
-                    <text x="550" y="405" text-anchor="middle" fill="#a08060" font-size="12">⛪</text>
-                    <text x="550" y="445" text-anchor="middle" fill="#a08060" font-size="14">Ложа</text>
-                </g>
+                <button class="map-pin" style="top: 35%; left: 78%;"
+                        data-location="pharmacy" title="Аптека Кроу">
+                    🏥
+                </button>
 
-                <g class="location" data-location="cemetery">
-                    <circle cx="250" cy="450" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
-                    <text x="250" y="455" text-anchor="middle" fill="#d4c5a9" font-size="12">⚰️</text>
-                    <text x="250" y="495" text-anchor="middle" fill="#d4c5a9" font-size="14">Кладбище</text>
-                </g>
+                <button class="map-pin" style="top: 82%; left: 38%;"
+                        data-location="cemetery" title="Кладбище">
+                    ⚰️
+                </button>
 
-                <g class="location" data-location="pharmacy">
-                    <circle cx="600" cy="200" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
-                    <text x="600" y="205" text-anchor="middle" fill="#d4c5a9" font-size="12">🏥</text>
-                    <text x="600" y="245" text-anchor="middle" fill="#d4c5a9" font-size="14">Аптека Кроу</text>
-                </g>
-
-                <g class="location" data-location="police">
-                    <circle cx="300" cy="150" r="20" fill="#8b7355" stroke="#d4c5a9" stroke-width="2"/>
-                    <text x="300" y="155" text-anchor="middle" fill="#d4c5a9" font-size="12">👮</text>
-                    <text x="300" y="195" text-anchor="middle" fill="#d4c5a9" font-size="14">Участок</text>
-                </g>
-            </svg>
+                <button class="map-pin" style="top: 60%; left: 68%;"
+                        data-location="lodge" title="Ложа">
+                    ⛪
+                </button>
+            </div>
         </div>
+
         <div id="location-info" class="info-box">
-            <p><em>Выберите локацию на карте.</em></p>
+            <p><em>Нажмите на метку на карте.</em></p>
         </div>
     </section>
 
     <section id="archive">
         <h2>📰 Газетный архив</h2>
-        <p>Выдержки из «Блэквудского вестника».</p>
+        <p>Выдержки из «Блэквудского вестника». Нажмите на статью, чтобы прочитать полностью.</p>
 
-        <article class="newspaper">
-            <h3>1943 — ЭПИДЕМИЯ В ПРИЮТЕ СВ. ЛЮЦИИ</h3>
-            <p>Приют св. Люции закрыт по причинам, не разглашаемым общественности. По слухам, причиной стала эпидемия неизвестной болезни. Двенадцать детей погибли, четверо пропали без вести. Полиция отказывается от комментариев.</p>
-        </article>
+        <div class="newspaper-list">
+            <article class="newspaper" data-article="1943">
+                <div class="newspaper-header">
+                    <span class="newspaper-date">12 июня 1943</span>
+                    <h3>ЭПИДЕМИЯ В ПРИЮТЕ СВ. ЛЮЦИИ</h3>
+                </div>
+                <p class="newspaper-preview">Приют св. Люции закрыт по причинам, не разглашаемым общественности...</p>
+                <span class="read-more">Читать →</span>
+            </article>
 
-        <article class="newspaper">
-            <h3>1944 — ПРОПАЖА ДЕТЕЙ ПРОДОЛЖАЕТСЯ</h3>
-            <p>За последний год в Блэквуде пропали трое детей. Родители требуют расследования. Инспектор Морган утверждает, что «принимаются все необходимые меры».</p>
-        </article>
+            <article class="newspaper" data-article="1944">
+                <div class="newspaper-header">
+                    <span class="newspaper-date">3 марта 1944</span>
+                    <h3>ПРОПАЖА ДЕТЕЙ ПРОДОЛЖАЕТСЯ</h3>
+                </div>
+                <p class="newspaper-preview">За последний год в Блэквуде пропали трое детей...</p>
+                <span class="read-more">Читать →</span>
+            </article>
 
-        <article class="newspaper">
-            <h3>1945 — ЭПИДЕМИЯ НЕ ПОДТВЕРЖДЕНА</h3>
-            <p>Медицинская комиссия не подтвердила слухи об эпидемии в приюте. По словам доктора Э. Кроу, «дети умирали от естественных причин».</p>
-        </article>
+            <article class="newspaper" data-article="1945">
+                <div class="newspaper-header">
+                    <span class="newspaper-date">17 августа 1945</span>
+                    <h3>ЭПИДЕМИЯ НЕ ПОДТВЕРЖДЕНА</h3>
+                </div>
+                <p class="newspaper-preview">Медицинская комиссия не подтвердила слухи об эпидемии в приюте...</p>
+                <span class="read-more">Читать →</span>
+            </article>
 
-        <article class="newspaper">
-            <h3>1953 — ЧАСТНЫЙ ДЕТЕКТИВ ПРИБЫЛ В ГОРОД</h3>
-            <p>По нашим данным, в Блэквуд прибыл частный детектив Джеймс Харпер. Цель визита неизвестна.</p>
-        </article>
+            <article class="newspaper" data-article="1953">
+                <div class="newspaper-header">
+                    <span class="newspaper-date">5 октября 1953</span>
+                    <h3>ЧАСТНЫЙ ДЕТЕКТИВ ПРИБЫЛ В ГОРОД</h3>
+                </div>
+                <p class="newspaper-preview">По нашим данным, в Блэквуд прибыл частный детектив Джеймс Харпер...</p>
+                <span class="read-more">Читать →</span>
+            </article>
+
+            <article class="newspaper" data-article="1943_2">
+                <div class="newspaper-header">
+                    <span class="newspaper-date">28 сентября 1943</span>
+                    <h3>ПОХОРОНЫ ДЕТЕЙ ПРОШЛИ В ЗАКРЫТОМ РЕЖИМЕ</h3>
+                </div>
+                <p class="newspaper-preview">Церемония прощания с погибшими в приюте св. Люции прошла в закрытом режиме...</p>
+                <span class="read-more">Читать →</span>
+            </article>
+        </div>
     </section>
 
     <section id="persons">
         <h2>👥 Досье</h2>
 
-        <div class="person">
-            <h3>Томас Морган</h3>
-            <p><strong>Статус:</strong> пропал без вести</p>
-            <p>Сын инспектора Моргана. В детстве дружил с Джеймсом Харпером. Последний раз видели в доме на Морнинг-лейн.</p>
-            <p class="quote">«Он смотрит через твои глаза.»</p>
-        </div>
+        <div class="person-list">
+            <div class="person">
+                <h3>Томас Морган</h3>
+                <p><strong>Статус:</strong> пропал без вести</p>
+                <p>Сын инспектора Моргана. В детстве дружил с Джеймсом Харпером. Последний раз видели в доме на Морнинг-лейн.</p>
+                <p class="quote">«Он смотрит через твои глаза.»</p>
+            </div>
 
-        <div class="person">
-            <h3>Доктор Элизабет Кроу</h3>
-            <p><strong>Статус:</strong> под подозрением</p>
-            <p>Городской врач. Работала в приюте св. Люции в 1943 году. Отказывается комментировать события прошлого.</p>
-            <p class="quote">«Наука требует жертв.»</p>
-        </div>
+            <div class="person">
+                <h3>Доктор Элизабет Кроу</h3>
+                <p><strong>Статус:</strong> под подозрением</p>
+                <p>Городской врач. Работала в приюте св. Люции в 1943 году. Отказывается комментировать события прошлого.</p>
+                <p class="quote">«Наука требует жертв.»</p>
+            </div>
 
-        <div class="person">
-            <h3>Инспектор Джордж Морган</h3>
-            <p><strong>Статус:</strong> свидетель</p>
-            <p>Отец Томаса. 27 лет в полиции Блэквуда. Скрывает информацию о пропавших.</p>
-            <p class="quote">«Правда в том, что я убил своего сына. Молчанием.»</p>
-        </div>
+            <div class="person">
+                <h3>Инспектор Джордж Морган</h3>
+                <p><strong>Статус:</strong> свидетель</p>
+                <p>Отец Томаса. 27 лет в полиции Блэквуда. Скрывает информацию о пропавших.</p>
+                <p class="quote">«Правда в том, что я убил своего сына. Молчанием.»</p>
+            </div>
 
-        <div class="person">
-            <h3>Безымянный</h3>
-            <p><strong>Статус:</strong> неизвестен</p>
-            <p>Личность не установлена. Появляется в городе в момент кризиса. Говорит загадками.</p>
-            <p class="quote">«Я — то, что осталось. Или то, что ты забыл.»</p>
+            <div class="person">
+                <h3>Безымянный</h3>
+                <p><strong>Статус:</strong> неизвестен</p>
+                <p>Личность не установлена. Появляется в городе в момент кризиса. Говорит загадками.</p>
+                <p class="quote">«Я — то, что осталось. Или то, что ты забыл.»</p>
+            </div>
         </div>
     </section>
 
@@ -155,6 +179,14 @@
 <footer>
     <p>© Блэквуд, 1953. Все события вымышлены. Или нет.</p>
 </footer>
+
+<!-- Модальное окно для статей -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modal-body"></div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
